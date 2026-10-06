@@ -889,7 +889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VehiculeController
   moveSpeed: 5
-  brackForce: 3
+  brakeForce: 3
   vehiculeRigidbody: {fileID: 1706165196}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:

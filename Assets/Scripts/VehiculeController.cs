@@ -14,14 +14,21 @@ public class VehiculeController : MonoBehaviour
         vehiculeRigidbody.AddForce(Vector3.forward * moveSpeed);
         
         // Freinage du véhicule
-        if (Input.GetKey(KeyCode.S))
-        {
-            Braking();
-        }
+        Braking();
     }
 
     private void Braking()
     {
-        vehiculeRigidbody.AddForce(Vector3.back * brakeForce);
+        //vehiculeRigidbody.AddForce(Vector3.back * brakeForce);
+        
+        if (Input.GetKey(KeyCode.S))
+        {
+            vehiculeRigidbody.linearDamping = brakeForce;
+        }
+        else
+        {
+            vehiculeRigidbody.linearDamping = 0;
+        }
+
     }
 }
