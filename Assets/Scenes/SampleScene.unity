@@ -888,6 +888,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92e1c8457f8d00947aa3685be63e885e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VehiculeController
+  spinSpeed: 10
   moveSpeed: 5
   brakeForce: 3
   vehiculeRigidbody: {fileID: 1706165196}
