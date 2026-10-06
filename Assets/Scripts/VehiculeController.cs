@@ -12,6 +12,12 @@ public class VehiculeController : MonoBehaviour
     {
         // Avancée automatique du véhicule
         vehiculeRigidbody.AddForce(Vector3.forward * moveSpeed);
+        
+        // Freinage du véhicule
+        if (Input.GetKey(KeyCode.S))
+        {
+            Bracking();
+        }
     }
 
     private void Bracking()
