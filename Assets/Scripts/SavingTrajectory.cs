@@ -9,8 +9,14 @@ public class SavingTrajectory : MonoBehaviour
     public List<float> positionZ = new List<float>();
     
 
-    private void Update()
+    void Update()
     {
+       positionX.Add(transform.position.x);
+       positionY.Add(transform.position.y);
+       positionZ.Add(transform.position.z);
        
+       print(positionX);
+       print(positionY);
+       print(positionZ);
     }
 }
