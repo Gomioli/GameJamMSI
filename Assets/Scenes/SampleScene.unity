@@ -1275,7 +1275,6 @@ GameObject:
   - component: {fileID: 1706165197}
   - component: {fileID: 1706165196}
   - component: {fileID: 1706165198}
-  - component: {fileID: 1706165199}
   m_Layer: 0
   m_Name: Vehicule
   m_TagString: Untagged
@@ -1366,21 +1365,6 @@ MonoBehaviour:
   moveSpeed: 5
   brakeForce: 3
   vehiculeRigidbody: {fileID: 1706165196}
---- !u!114 &1706165199
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706165194}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 15a48602318395f409893359497b3c9d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrailSpawner
-  trailPrefab: {fileID: 6338613501006424793, guid: cdc1e201768bdc349949bc278a0bf317, type: 3}
-  trails: []
-  trailPosition: {x: 0, y: 0, z: 0}
 --- !u!1 &2003418897
 GameObject:
   m_ObjectHideFlags: 0
@@ -1391,6 +1375,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2003418899}
   - component: {fileID: 2003418898}
+  - component: {fileID: 2003418900}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1411,6 +1396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timerText: {fileID: 1214822933}
+  timeLeft: 120
 --- !u!4 &2003418899
 Transform:
   m_ObjectHideFlags: 0
@@ -1426,6 +1412,20 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2003418900
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003418897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8e5feb19ff3ef0b49addcdc4368486e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::IterationEnding
+  timer: {fileID: 2003418898}
+  trail: {fileID: 105018551}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

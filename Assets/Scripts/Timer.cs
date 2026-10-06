@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
-    [SerializeField] float timer = 120f;
+    public float timeLeft = 120f;
+    private float timeTime = 120f;
     
     void Start()
     {
@@ -16,8 +17,18 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        timer -= Time.deltaTime;
-        timerText.text = timer.ToString();
+        if (timeLeft > 0)
+        {
+            timeLeft -= Time.deltaTime;
+            timerText.text = timeLeft.ToString();
+        }
+        else
+        {
+            timeLeft = timeTime;
+            timerText.text = timeLeft.ToString();
+        }
+
+
     }
     
     

@@ -1,16 +1,19 @@
+using System;
 using UnityEngine;
+using System.Collections.Generic;
 
 public class IterationEnding : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private Timer timer;
+    [SerializeField] private GameObject trail;
+    
+    [SerializeField] private List<GameObject> trails = new List<GameObject>();
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (timer.timeLeft <= 0)
+        {
+            trails.Add(trail);
+        }
     }
 }
