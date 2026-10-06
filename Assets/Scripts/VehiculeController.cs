@@ -19,8 +19,6 @@ public class VehiculeController : MonoBehaviour
 
     private void Braking()
     {
-        //vehiculeRigidbody.AddForce(Vector3.back * brakeForce);
-        
         if (Input.GetKey(KeyCode.S))
         {
             vehiculeRigidbody.linearDamping = brakeForce;
