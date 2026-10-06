@@ -14,6 +14,6 @@ public class VehiculeController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        vehiculeRigidbody.AddRelativeForce(Vector3.forward * moveSpeed);
+        vehiculeRigidbody.AddForce(Vector3.forward * moveSpeed);
     }
 }
