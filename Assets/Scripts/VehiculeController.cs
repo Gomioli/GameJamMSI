@@ -36,13 +36,13 @@ public class VehiculeController : MonoBehaviour
 
     private void Spining()
     {
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetKey(KeyCode.A))
         {
             Quaternion targetRotation = Quaternion.Euler(0, -spinSpeed * Time.deltaTime, 0);
             vehiculeRigidbody.MoveRotation(vehiculeRigidbody.rotation * targetRotation);
         }
 
-        if (Input.GetKey(KeyCode.E))
+        if (Input.GetKey(KeyCode.D))
         {
             Quaternion targetRotation = Quaternion.Euler(0, spinSpeed * Time.deltaTime, 0);
             vehiculeRigidbody.MoveRotation(vehiculeRigidbody.rotation * targetRotation);
