@@ -6,7 +6,7 @@ public class VehiculeController : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
     [SerializeField] private float brakeForce = 1f;
     
-    [SerializeField] private Rigidbody vehiculeRigidbody;
+    [SerializeField] public Rigidbody vehiculeRigidbody;
     
     
     

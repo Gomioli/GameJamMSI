@@ -1396,7 +1396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timerText: {fileID: 1214822933}
-  timeLeft: 120
+  timeLeft: 10
 --- !u!4 &2003418899
 Transform:
   m_ObjectHideFlags: 0
@@ -1426,6 +1426,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IterationEnding
   timer: {fileID: 2003418898}
   trail: {fileID: 105018551}
+  vehiculeController: {fileID: 1706165198}
+  trails: []
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
