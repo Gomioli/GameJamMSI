@@ -40,7 +40,12 @@ public class VehiculeController : MonoBehaviour
         {
             Quaternion targetRotation = Quaternion.Euler(0, -spinSpeed * Time.deltaTime, 0);
             vehiculeRigidbody.MoveRotation(vehiculeRigidbody.rotation * targetRotation);
-            print("Tu tournes");
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            Quaternion targetRotation = Quaternion.Euler(0, spinSpeed * Time.deltaTime, 0);
+            vehiculeRigidbody.MoveRotation(vehiculeRigidbody.rotation * targetRotation);
         }
     }
 }
