@@ -13,7 +13,7 @@ public class VehiculeController : MonoBehaviour
     void Update()
     {
         // Avancée automatique du véhicule
-        vehiculeRigidbody.AddForce(Vector3.forward * moveSpeed);
+        vehiculeRigidbody.AddForce(transform.forward * moveSpeed);
         
         // Freinage du véhicule
         Braking();
