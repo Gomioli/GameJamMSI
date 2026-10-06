@@ -3,7 +3,7 @@ using UnityEngine;
 public class VehiculeController : MonoBehaviour
 {
     [SerializeField] private float moveSpeed = 5f;
-    [SerializeField] private float brakForce = 1f;
+    [SerializeField] private float brakeForce = 1f;
     [SerializeField] private Rigidbody vehiculeRigidbody;
     
     
@@ -22,6 +22,6 @@ public class VehiculeController : MonoBehaviour
 
     private void Braking()
     {
-        vehiculeRigidbody.AddForce(Vector3.back * brakForce);
+        vehiculeRigidbody.AddForce(Vector3.back * brakeForce);
     }
 }
