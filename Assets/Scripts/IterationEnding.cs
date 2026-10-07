@@ -7,16 +7,22 @@ public class IterationEnding : MonoBehaviour
     [SerializeField] private Timer timer;
     [SerializeField] private GameObject trail;
 
+    public bool trailAdd = false;
+
     [SerializeField] private VehiculeController vehiculeController;
     
     [SerializeField] private List<GameObject> trails = new List<GameObject>();
 
-    private void Update()
+    private void Awake()
     {
-        if (timer.timeLeft <= 0)
-        {
-            trails.Add(trail);
-            vehiculeController.vehiculeRigidbody.velocity = new Vector3(0f, 0f, 0f);
-        }
+        trailAdd = false;
+        
+    }
+
+    public void AddTrail()
+    {
+        trails.Add(trail);
+        vehiculeController.enabled = false;
+        trailAdd = true;
     }
 }

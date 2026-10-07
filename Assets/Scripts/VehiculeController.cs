@@ -10,7 +10,7 @@ public class VehiculeController : MonoBehaviour
     
     
     
-    void Update()
+    void FixedUpdate()
     {
         // Avancée automatique du véhicule
         vehiculeRigidbody.AddForce(transform.forward * moveSpeed);
@@ -38,13 +38,13 @@ public class VehiculeController : MonoBehaviour
     {
         if (Input.GetKey(KeyCode.A))
         {
-            Quaternion targetRotation = Quaternion.Euler(0, -spinSpeed * Time.deltaTime, 0);
+            Quaternion targetRotation = Quaternion.Euler(0, -spinSpeed * Time.fixedDeltaTime, 0);
             vehiculeRigidbody.MoveRotation(vehiculeRigidbody.rotation * targetRotation);
         }
 
         if (Input.GetKey(KeyCode.D))
         {
-            Quaternion targetRotation = Quaternion.Euler(0, spinSpeed * Time.deltaTime, 0);
+            Quaternion targetRotation = Quaternion.Euler(0, spinSpeed * Time.fixedDeltaTime, 0);
             vehiculeRigidbody.MoveRotation(vehiculeRigidbody.rotation * targetRotation);
         }
     }

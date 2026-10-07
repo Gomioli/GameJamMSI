@@ -1362,7 +1362,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::VehiculeController
   spinSpeed: 50
-  moveSpeed: 5
+  moveSpeed: 10
   brakeForce: 3
   vehiculeRigidbody: {fileID: 1706165196}
 --- !u!1 &2003418897
@@ -1396,6 +1396,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Timer
   timerText: {fileID: 1214822933}
+  iterationEnding: {fileID: 2003418900}
   timeLeft: 10
 --- !u!4 &2003418899
 Transform:
@@ -1426,6 +1427,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::IterationEnding
   timer: {fileID: 2003418898}
   trail: {fileID: 105018551}
+  trailAdd: 0
   vehiculeController: {fileID: 1706165198}
   trails: []
 --- !u!1660057539 &9223372036854775807

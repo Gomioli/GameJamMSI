@@ -6,8 +6,10 @@ using UnityEngine.UI;
 public class Timer : MonoBehaviour
 {
     [SerializeField] private TextMeshProUGUI timerText;
+    
+    [SerializeField] private IterationEnding iterationEnding;
+    
     public float timeLeft = 120f;
-    private float timeTime = 120f;
     
     void Start()
     {
@@ -17,18 +19,23 @@ public class Timer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        TimePassing();
+    }
+
+
+    private void TimePassing()
+    {
         if (timeLeft > 0)
         {
             timeLeft -= Time.deltaTime;
             timerText.text = timeLeft.ToString();
         }
-        else
+        else if (timeLeft <= 0 && iterationEnding.trailAdd == false) 
         {
-            timeLeft = timeTime;
+            timeLeft = 0;
             timerText.text = timeLeft.ToString();
+            iterationEnding.AddTrail();
         }
-
-
     }
     
     
