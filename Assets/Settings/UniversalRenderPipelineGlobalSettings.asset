@@ -66,11 +66,7 @@ MonoBehaviour:
       - rid: 94434999115972621
       - rid: 94434999115972622
       - rid: 94434999115972623
-<<<<<<< Updated upstream
       - rid: 6380318813137666050
-=======
-      - rid: 94435027089883136
->>>>>>> Stashed changes
     m_RuntimeSettings:
       m_List: []
   m_AssetVersion: 10
@@ -271,11 +267,7 @@ MonoBehaviour:
       data:
         m_Version: 1
         m_UseBicubicLightmapSampling: 0
-<<<<<<< Updated upstream
     - rid: 6380318813137666050
-=======
-    - rid: 94435027089883136
->>>>>>> Stashed changes
       type: {class: WorldRenderPipelineResources, ns: UnityEngine.PathTracing.Core, asm: Unity.PathTracing.Runtime}
       data:
         _version: 3
