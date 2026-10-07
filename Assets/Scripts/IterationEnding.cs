@@ -23,7 +23,8 @@ public class IterationEnding : MonoBehaviour
     public void AddTrail()
     {
         trails.Add(trail);
-        vehiculeController.enabled = false;
+        if (vehiculeController != null)
+            vehiculeController.enabled = false;
         trailAdd = true;
         iterationCount++;
     }

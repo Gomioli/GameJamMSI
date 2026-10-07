@@ -1,16 +1,48 @@
-using System;
+using System.Collections;
 using UnityEngine;
-using UnityEditor;
 
 public class TrailMeshManager : MonoBehaviour
 {
     [SerializeField] private TrailRenderer trailRenderer;
 
-    [ContextMenu("Sauvegarder le mesh")]
+    private Mesh mesh;
+    private MeshFilter meshFilter;
+    private MeshCollider meshCollider;
+
+    private void Awake()
+    {
+        mesh = new Mesh();
+
+        meshFilter = GetComponent<MeshFilter>();
+        if (meshFilter == null)
+            meshFilter = gameObject.AddComponent<MeshFilter>();
+
+        meshCollider = GetComponent<MeshCollider>();
+        if (meshCollider == null)
+            meshCollider = gameObject.AddComponent<MeshCollider>();
+    }
+
+    private void Start()
+    {
+        StartCoroutine(SauvegarderCoroutine());
+    }
+
     private void Sauvegarder()
     {
-        Mesh mesh = new Mesh();
+        mesh.Clear();
         trailRenderer.BakeMesh(mesh, true);
-        AssetDatabase.CreateAsset(mesh, "Assets/TrailMesh.asset");
+
+        meshFilter.sharedMesh = mesh;
+        meshCollider.sharedMesh = null; 
+        meshCollider.sharedMesh = mesh;
+    }
+
+    private IEnumerator SauvegarderCoroutine()
+    {
+        while (true)
+        {
+            yield return new WaitForSeconds(1f);
+            Sauvegarder();
+        }
     }
 }
