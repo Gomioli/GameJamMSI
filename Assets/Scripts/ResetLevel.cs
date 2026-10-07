@@ -10,7 +10,10 @@ public class ResetLevel : MonoBehaviour
     
     void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.R))
+        {
+            Reset();
+        }
     }
 
     public void Reset()
@@ -18,9 +21,11 @@ public class ResetLevel : MonoBehaviour
         if (iterationEnding.iterationCount > 0)
         {
             Vehicule.transform.position = vehiculePositionStart.position;
+            Vehicule.transform.rotation = vehiculePositionStart.rotation;
             iterationEnding.trails.ForEach(trail =>
                 {
                     trail.transform.position = trailPositionStart.position;
+                    trail.transform.rotation = trailPositionStart.rotation;
                 }
             );
         }
