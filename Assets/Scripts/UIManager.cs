@@ -41,6 +41,7 @@ public class UIManager : MonoBehaviour
         {
             HasWin();
             ShowUI();
+            IncreaseDistanceActuelle();
         }
     }
     
@@ -58,10 +59,10 @@ public class UIManager : MonoBehaviour
     // Cette fonction sert à faire le compte de la distance actuelle. Donc de 0 à la distance parcourue à cette run
     private void IncreaseDistanceActuelle()
     {
-        while (distanceManager.distanceParcourueInt > distancePrecedentInt)
+        while (distanceManager.distanceParcourueInt != distanceActuelleInt)
         {
-            distanceActuelleInt = ++distanceActuelleInt;
-            distancePrecedentText.text = distanceActuelleInt.ToString();
+            distanceActuelleInt += 1;
+            distanceActuelleText.text = distanceActuelleInt.ToString();
         }
     }
 
