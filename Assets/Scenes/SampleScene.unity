@@ -387,6 +387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailMeshManager
   trailRenderer: {fileID: 105018553}
+  refreshRate: 1
 --- !u!1 &121274348
 GameObject:
   m_ObjectHideFlags: 0
@@ -1874,6 +1875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TrailMeshManager
   trailRenderer: {fileID: 105018553}
+  refreshRate: 1
 --- !u!4 &1142220157
 Transform:
   m_ObjectHideFlags: 0
