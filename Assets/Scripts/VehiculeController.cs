@@ -3,7 +3,7 @@ using UnityEngine;
 public class VehiculeController : MonoBehaviour
 {
     [SerializeField] private float spinSpeed = 2f;
-    [SerializeField] private float moveSpeed = 5f;
+    [SerializeField] public float moveSpeed = 5f;
     [SerializeField] private float brakeForce = 1f;
     
     [SerializeField] public Rigidbody vehiculeRigidbody;

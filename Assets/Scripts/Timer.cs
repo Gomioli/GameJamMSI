@@ -10,6 +10,7 @@ public class Timer : MonoBehaviour
     [SerializeField] private IterationEnding iterationEnding;
     
     public float timeLeft = 120f;
+    public bool isFinished = false;
     
     void Start()
     {
@@ -35,6 +36,7 @@ public class Timer : MonoBehaviour
             timeLeft = 0;
             timerText.text = timeLeft.ToString();
             iterationEnding.AddTrail();
+            isFinished = true;
         }
     }
     

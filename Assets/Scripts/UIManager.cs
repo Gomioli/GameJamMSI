@@ -19,7 +19,7 @@ public class UIManager : MonoBehaviour
     
     void Update()
     {
-        if (timer.timeLeft == 0)
+        if (timer.isFinished)
         {
             ShowingUI();
             
