@@ -3317,9 +3317,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetLevel
   Vehicule: {fileID: 1706165194}
-  vehiculePositionStart: {fileID: 0}
-  trailPositionStart: {fileID: 0}
-  iterationEnding: {fileID: 0}
+  vehiculePositionStart: {fileID: 1210971874}
+  trailPositionStart: {fileID: 1907254244}
+  iterationEnding: {fileID: 2003418900}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
