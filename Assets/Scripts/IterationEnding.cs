@@ -12,7 +12,7 @@ public class IterationEnding : MonoBehaviour
 
     [SerializeField] private VehiculeController vehiculeController;
     
-    [SerializeField] private List<GameObject> trails = new List<GameObject>();
+    [SerializeField] public List<GameObject> trails = new List<GameObject>();
 
     private void Awake()
     {

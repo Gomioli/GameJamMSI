@@ -1901,6 +1901,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a977dde7db6f9d6449d39e3bd251fbe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FailManager
+--- !u!1 &1210971873
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1210971874}
+  m_Layer: 0
+  m_Name: VehiculePositionStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1210971874
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1210971873}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.64, z: -3.78}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1214822931
 GameObject:
   m_ObjectHideFlags: 0
@@ -3037,6 +3068,37 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873550981}
   m_CullTransparentMesh: 1
+--- !u!1 &1907254243
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1907254244}
+  m_Layer: 0
+  m_Name: TrailPositionStart
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1907254244
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1907254243}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.64, z: 5.6}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1978091186
 GameObject:
   m_ObjectHideFlags: 0
@@ -3185,6 +3247,7 @@ GameObject:
   - component: {fileID: 2003418899}
   - component: {fileID: 2003418898}
   - component: {fileID: 2003418900}
+  - component: {fileID: 2003418901}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -3236,16 +3299,34 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IterationEnding
   timer: {fileID: 2003418898}
-  trail: {fileID: 105018551}
+  trail: {fileID: 1142220154}
   trailAdd: 0
   iterationCount: 0
   vehiculeController: {fileID: 1706165198}
   trails: []
+--- !u!114 &2003418901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003418897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf660df8c6f9bd341a9a1edf8ad41ab3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ResetLevel
+  Vehicule: {fileID: 1706165194}
+  vehiculePositionStart: {fileID: 0}
+  trailPositionStart: {fileID: 0}
+  iterationEnding: {fileID: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2003418899}
+  - {fileID: 1210971874}
+  - {fileID: 1907254244}
   - {fileID: 410087041}
   - {fileID: 832575519}
   - {fileID: 1706165195}

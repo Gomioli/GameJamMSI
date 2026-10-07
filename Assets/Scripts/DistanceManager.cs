@@ -29,7 +29,7 @@ public class DistanceManager : MonoBehaviour
     {
         if (!timer.isFinished)
         {
-            distanceParcourueFloat += vehicleController.vehiculeRigidbody.velocity.magnitude * Time.deltaTime;
+            distanceParcourueFloat += vehicleController.vehiculeRigidbody.linearVelocity.magnitude * Time.deltaTime;
             distanceParcourueInt = Mathf.RoundToInt(distanceParcourueFloat);
             distanceParcourueText.text = distanceParcourueInt.ToString();
         }
