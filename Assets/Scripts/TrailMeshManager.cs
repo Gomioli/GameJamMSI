@@ -8,6 +8,7 @@ public class TrailMeshManager : MonoBehaviour
     private Mesh mesh;
     private MeshFilter meshFilter;
     private MeshCollider meshCollider;
+    [SerializeField] private float refreshRate = 1f;
 
     private void Awake()
     {
@@ -41,7 +42,8 @@ public class TrailMeshManager : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(1f);
+            
+            yield return new WaitForSeconds(refreshRate);
             Sauvegarder();
         }
     }
