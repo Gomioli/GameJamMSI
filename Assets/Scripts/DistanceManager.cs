@@ -3,20 +3,20 @@ using UnityEngine;
 
 public class DistanceManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI distanceText;
+    [SerializeField] private TextMeshProUGUI distanceParcourueText;
     
     [SerializeField] private VehiculeController vehicleController;
     [SerializeField] private Timer timer;
 
-    public float distanceFloat;
-    public int distanceInt;
+    public float distanceParcourueFloat;
+    public int distanceParcourueInt;
     
 
     void Start()
     {
-        distanceText.text = "0";
+        distanceParcourueText.text = "0";
         
-        distanceFloat = float.Parse(distanceText.text);
+        distanceParcourueFloat = float.Parse(distanceParcourueText.text);
     }
 
 
@@ -29,9 +29,9 @@ public class DistanceManager : MonoBehaviour
     {
         if (!timer.isFinished)
         {
-            distanceFloat += vehicleController.vehiculeRigidbody.velocity.magnitude * Time.deltaTime;
-            distanceInt = Mathf.RoundToInt(distanceFloat);
-            distanceText.text = distanceInt.ToString();
+            distanceParcourueFloat += vehicleController.vehiculeRigidbody.velocity.magnitude * Time.deltaTime;
+            distanceParcourueInt = Mathf.RoundToInt(distanceParcourueFloat);
+            distanceParcourueText.text = distanceParcourueInt.ToString();
         }
             
     }

@@ -8,6 +8,7 @@ public class IterationEnding : MonoBehaviour
     [SerializeField] private GameObject trail;
 
     public bool trailAdd = false;
+    public int iterationCount = 0;
 
     [SerializeField] private VehiculeController vehiculeController;
     
@@ -24,5 +25,6 @@ public class IterationEnding : MonoBehaviour
         trails.Add(trail);
         vehiculeController.enabled = false;
         trailAdd = true;
+        iterationCount++;
     }
 }
