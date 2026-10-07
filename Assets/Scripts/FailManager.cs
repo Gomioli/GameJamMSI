@@ -10,7 +10,7 @@ public class FailManager : MonoBehaviour
     }
 
     private void OnCollisionEnter(Collision collision)
-    {
+    { 
         Destroy(collision.gameObject);
     }
     
