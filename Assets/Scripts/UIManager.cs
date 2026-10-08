@@ -22,6 +22,7 @@ public class UIManager : MonoBehaviour
 
     [SerializeField] private DistanceManager distanceManager;
     [SerializeField] private IterationEnding iterationEnding;
+    [SerializeField] private EndingTrigger endingTrigger;
     [SerializeField] private Timer timer;
 
 
@@ -70,7 +71,22 @@ public class UIManager : MonoBehaviour
     // Cette fonction va servir pour savoir quoi afficher dans ShowUI
     private void HasWin() 
     {
-        
+        if (endingTrigger.hasFinished) // A passer la ligne d'arrivee
+        {
+            victoireDefaiteText.text = "BRAVO";
+            recommencerButton.enabled = false;
+            ColorBlock cbRecommencer = recommencerButton.colors;
+            cbRecommencer.normalColor = Color.gray;
+            recommencerButton.colors = cbRecommencer;
+        }
+        else if (timer.isFinished) // Le temps s'est ecoule
+        {
+            victoireDefaiteText.text = "AIE...";
+            prochaineCourseButton.enabled = false;
+            ColorBlock cbProchaineCourse = prochaineCourseButton.colors;
+            cbProchaineCourse.normalColor = Color.gray;
+            prochaineCourseButton.colors = cbProchaineCourse;
+        }
     }
     
     
