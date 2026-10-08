@@ -701,7 +701,7 @@ MonoBehaviour:
   distanceManager: {fileID: 1706165199}
   iterationEnding: {fileID: 2003418900}
   endingTrigger: {fileID: 721239140}
-  triggerVroom: {fileID: 1723838643}
+  triggerVroom: {fileID: 1415707318}
   timer: {fileID: 2003418898}
 --- !u!4 &125023304
 Transform:
@@ -5611,6 +5611,11 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -1099845240372282562, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
+--- !u!1 &635244539 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f128d9afdfdaf143aacd92f3e5d4798, type: 3}
+  m_PrefabInstance: {fileID: 1415707315}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &642277984
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10889,16 +10894,62 @@ PrefabInstance:
       propertyPath: m_Name
       value: vroomSupreme
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 8f128d9afdfdaf143aacd92f3e5d4798, type: 3}
+      propertyPath: m_TagString
+      value: PlayerCollider
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f128d9afdfdaf143aacd92f3e5d4798, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1415707317}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 8f128d9afdfdaf143aacd92f3e5d4798, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1415707318}
   m_SourcePrefab: {fileID: 100100000, guid: 8f128d9afdfdaf143aacd92f3e5d4798, type: 3}
 --- !u!4 &1415707316 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8f128d9afdfdaf143aacd92f3e5d4798, type: 3}
   m_PrefabInstance: {fileID: 1415707315}
   m_PrefabAsset: {fileID: 0}
+--- !u!65 &1415707317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635244539}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 6.141462, y: 3.3332422, z: 12.550392}
+  m_Center: {x: 0.3786571, y: -0.3248986, z: 3.0288906}
+--- !u!114 &1415707318
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 635244539}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233a7a6ff01c4ef45b0bf8e41bf81298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerVroom
+  vehiculeController: {fileID: 1706165198}
+  uiManager: {fileID: 125023303}
+  isDead: 0
 --- !u!1001 &1460440448
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13835,9 +13886,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
   resetLevel: {fileID: 2003418901}
-  uiManager: {fileID: 0}
-  vehiculeController: {fileID: 0}
-  vehiculePrefab: {fileID: 0}
+  uiManager: {fileID: 125023303}
+  vehiculeController: {fileID: 1706165198}
+  vehiculePrefab: {fileID: 635244539}
 --- !u!1001 &1877265916
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14787,12 +14838,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetLevel
   Vehicule: {fileID: 1706165194}
-  vroom: {fileID: 1723838640}
+  vroom: {fileID: 635244539}
   vehiculePositionStart: {fileID: 1210971874}
   trailPositionStart: {fileID: 1907254244}
-  endingTrigger: {fileID: 0}
-  distanceManager: {fileID: 0}
-  timer: {fileID: 0}
+  endingTrigger: {fileID: 721239140}
+  distanceManager: {fileID: 1706165199}
+  timer: {fileID: 2003418898}
   iterationEnding: {fileID: 2003418900}
 --- !u!114 &2003418902
 MonoBehaviour:
