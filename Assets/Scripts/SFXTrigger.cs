@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.Android;
 using UnityEngine.Audio;
 
-public class AccelerationTrigger : MonoBehaviour
+public class sfxTrigger : MonoBehaviour
 {
     public ulong moteurBagnole;
     public AudioClip accelerartionBagnole;
@@ -16,6 +16,7 @@ public class AccelerationTrigger : MonoBehaviour
 
     [SerializeField] private GameObject vehicule;
     [SerializeField] private VehiculeController vehiculeController;
+    [SerializeField] private TriggerVroom triggerVroom;
 
     void Start()
     {
@@ -40,8 +41,14 @@ public class AccelerationTrigger : MonoBehaviour
             GetComponent<AudioSource>().PlayOneShot(freinBagnole);
         }
 
+        if (triggerVroom.isDead)
+        {
+            GetComponent<AudioSource>().PlayOneShot(mortBagnole);
+        }
+
 
         // GetComponent<AudioSource>().Play(moteurBagnole);
         // GetComponent<AudioSource>().pitch = intensitePitch * vehiculeController.vehiculeRigidbody.linearVelocity;
     }
+    
 }
