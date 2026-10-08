@@ -9,8 +9,11 @@ public class TriggerVroom : MonoBehaviour
     
     public void OnTriggerEnter(Collider other)
     {
+        
+        print("TOUCHE");
         if (other.gameObject.CompareTag("Trail"))
         {
+            
             foreach (MeshRenderer mr in GetComponentsInChildren<MeshRenderer>())
             {
                 mr.enabled = false;
@@ -18,6 +21,7 @@ public class TriggerVroom : MonoBehaviour
             vehiculeController.enabled = false;
             uiManager.enabled = true;
             isDead = true;
+            Debug.Log(isDead);
         }
     }
     

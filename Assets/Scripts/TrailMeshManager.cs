@@ -9,6 +9,7 @@ public class TrailMeshManager : MonoBehaviour
     private MeshFilter meshFilter;
     private MeshCollider meshCollider;
     [SerializeField] private float refreshRate = 1f;
+    [SerializeField] private Camera camera;
 
     private void Awake()
     {
@@ -31,7 +32,9 @@ public class TrailMeshManager : MonoBehaviour
     private void Sauvegarder()
     {
         mesh.Clear();
-        trailRenderer.BakeMesh(mesh, true);
+        Debug.Log("Ok");
+        trailRenderer.BakeMesh(mesh, camera, true);
+        
 
         meshFilter.sharedMesh = mesh;
         meshCollider.sharedMesh = null; 
