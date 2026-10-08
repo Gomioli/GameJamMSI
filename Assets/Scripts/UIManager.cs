@@ -1,4 +1,4 @@
-using NUnit.Framework;
+using System.Collections;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -21,7 +21,15 @@ public class UIManager : MonoBehaviour
     
     //public int distancePrecedentInt;
     public int distanceActuelleInt;
+    public float distanceActuelleFloat;
     public int distanceTotalInt;
+    public float distanceTotalFloat;
+    
+    [SerializeField] private float speedWrite = 3f;
+    
+    private Coroutine animCoroutine;
+    private bool animationLancee;
+    
 
     [SerializeField] private DistanceManager distanceManager;
     [SerializeField] private IterationEnding iterationEnding;
@@ -41,14 +49,16 @@ public class UIManager : MonoBehaviour
     
     void Update()
     {
-        if (endingTrigger.hasFinished) // Je vais devoir changer ça vu que maintenant c'est en FINISSANT UN TOUR
+        if (endingTrigger.hasFinished && !animationLancee)
         {
+            animationLancee = true;
             HasWin();
             ShowUI();
-            IncreaseDistanceActuelleAndTotal();
+            LancerAnimation();
         }
-        else if (timer.isFinished)
+        else if (timer.isFinished && !animationLancee)
         {
+            animationLancee = true;
             HasWin();
             ShowUI();
         }
@@ -65,23 +75,45 @@ public class UIManager : MonoBehaviour
     }
 
     
-    // Cette fonction sert à faire le compte de la distance actuelle. Donc de 0 à la distance parcourue à cette run
-    private void IncreaseDistanceActuelleAndTotal()
+    public void LancerAnimation()
     {
-        while (distanceManager.distanceParcourueInt != distanceActuelleInt)
+        if (animCoroutine != null) StopCoroutine(animCoroutine);
+        animCoroutine = StartCoroutine(IncreaseDistanceActuelleAndTotal());
+    }
+    
+    
+    
+    // Cette fonction sert à faire le compte de la distance actuelle. Donc de 0 à la distance parcourue à cette run
+    private IEnumerator IncreaseDistanceActuelleAndTotal()
+    {
+        float cible = distanceManager.distanceParcourueInt;
+
+        // 1. Monte jusqu'à la cible, sans la dépasser
+        while (distanceActuelleFloat < cible)
         {
-            distanceActuelleInt += 1;
+            distanceActuelleFloat += Time.deltaTime * speedWrite;
+            distanceActuelleFloat = Mathf.Min(distanceActuelleFloat, cible);
+            distanceActuelleInt = Mathf.RoundToInt(distanceActuelleFloat);
             distanceActuelleText.text = distanceActuelleInt.ToString();
-            
+            yield return null;
         }
-        while (distanceActuelleInt > 0)
+
+        // 2. Descend vers 0 et le total monte
+        while (distanceActuelleFloat > 0f)
         {
-            distanceActuelleInt -= 1;
+            float step = Mathf.Min(Time.deltaTime * speedWrite, distanceActuelleFloat);
+
+            distanceActuelleFloat -= step;
+            distanceTotalFloat += step;
+
+            distanceActuelleInt = Mathf.RoundToInt(distanceActuelleFloat);
+            distanceTotalInt = Mathf.RoundToInt(distanceTotalFloat);
+
             distanceActuelleText.text = distanceActuelleInt.ToString();
-            distanceTotalInt += 1;
             distanceTotalText.text = distanceTotalInt.ToString();
+            yield return null;
         }
-        
+    
     }
 
     

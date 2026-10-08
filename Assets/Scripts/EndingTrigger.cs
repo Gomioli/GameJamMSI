@@ -21,10 +21,9 @@ public class EndingTrigger : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject == vehicule)
+        if (other.CompareTag("Player"))
         {
             hasFinished = true;
-            Debug.Log("Trigger touché par : " + other.name);
         }
     }
 
