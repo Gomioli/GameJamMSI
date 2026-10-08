@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
-    [SerializeField] private Canvas ecranFin;
+    [SerializeField] public Canvas ecranFin;
     //[SerializeField] private TextMeshProUGUI distancePrecedentText;
     [SerializeField] private TextMeshProUGUI distanceActuelleText;
     [SerializeField] private TextMeshProUGUI distanceTotalText;
@@ -49,7 +49,7 @@ public class UIManager : MonoBehaviour
     
     void Update()
     {
-        if (endingTrigger.hasFinished && !animationLancee)
+        if (endingTrigger.isPassed == 2 && !animationLancee)
         {
             animationLancee = true;
             HasWin();
@@ -87,8 +87,7 @@ public class UIManager : MonoBehaviour
     private IEnumerator IncreaseDistanceActuelleAndTotal()
     {
         float cible = distanceManager.distanceParcourueInt;
-
-        // 1. Monte jusqu'à la cible, sans la dépasser
+        
         while (distanceActuelleFloat < cible)
         {
             distanceActuelleFloat += Time.deltaTime * speedWrite;
@@ -97,8 +96,7 @@ public class UIManager : MonoBehaviour
             distanceActuelleText.text = distanceActuelleInt.ToString();
             yield return null;
         }
-
-        // 2. Descend vers 0 et le total monte
+        
         while (distanceActuelleFloat > 0f)
         {
             float step = Mathf.Min(Time.deltaTime * speedWrite, distanceActuelleFloat);
@@ -120,7 +118,7 @@ public class UIManager : MonoBehaviour
     // Cette fonction va servir pour savoir quoi afficher dans ShowUI
     private void HasWin() 
     {
-        if (endingTrigger.hasFinished) // A passer la ligne d'arrivee
+        if (endingTrigger.isPassed == 2) // A passer la ligne d'arrivee
         {
             victoireDefaiteText.text = "BRAVO";
             recommencerButton.enabled = false;

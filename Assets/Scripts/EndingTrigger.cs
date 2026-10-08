@@ -8,8 +8,9 @@ public class EndingTrigger : MonoBehaviour
 
     [SerializeField] private IterationEnding iterationEnding;
 
-    private float debutTrigger = 10f;
+    private int debutTrigger = 10;
     public bool hasFinished = false;
+    public int isPassed = 0;
 
 
     private void Start()
@@ -23,18 +24,21 @@ public class EndingTrigger : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
-            hasFinished = true;
+            //hasFinished = true;
+            isPassed++;
         }
     }
 
 
     private IEnumerator AttenteTrigger()
     {
+        
         yield return new WaitForSeconds(debutTrigger);
+        
     }
-    
-    
-    
-    
-    
+
+
+
+
+
 }

@@ -1142,13 +1142,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 721239139}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -92.8, y: 6.7, z: 236.3}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -12.1, y: 6.7, z: 17.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757643765
 GameObject:
   m_ObjectHideFlags: 0
@@ -3038,6 +3038,7 @@ GameObject:
   - component: {fileID: 1873550985}
   - component: {fileID: 1873550984}
   - component: {fileID: 1873550983}
+  - component: {fileID: 1873550986}
   m_Layer: 5
   m_Name: RecommencerButton
   m_TagString: Untagged
@@ -3108,7 +3109,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1873550984}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1873550986}
+        m_TargetAssemblyTypeName: ButtonManager, Assembly-CSharp
+        m_MethodName: OnClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1873550984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3147,6 +3160,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1873550981}
   m_CullTransparentMesh: 1
+--- !u!114 &1873550986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1873550981}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2013ebb41df65254dbf3ab5ae87b5848, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ButtonManager
+  resetLevel: {fileID: 2003418901}
 --- !u!1 &1907254243
 GameObject:
   m_ObjectHideFlags: 0
@@ -3382,8 +3408,8 @@ MonoBehaviour:
   trailAdd: 0
   iterationCount: 0
   vehiculeController: {fileID: 1706165198}
-  failManager: {fileID: 0}
-  endingTrigger: {fileID: 0}
+  failManager: {fileID: 1142220158}
+  endingTrigger: {fileID: 721239140}
   trails: []
 --- !u!114 &2003418901
 MonoBehaviour:
