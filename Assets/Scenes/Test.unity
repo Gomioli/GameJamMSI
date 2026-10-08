@@ -384,6 +384,7 @@ MonoBehaviour:
   distanceActuelleInt: 0
   distanceManager: {fileID: 1706165199}
   iterationEnding: {fileID: 2003418900}
+  endingTrigger: {fileID: 0}
   timer: {fileID: 2003418898}
 --- !u!4 &125023304
 Transform:
@@ -1062,6 +1063,75 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 514482720}
   m_CullTransparentMesh: 1
+--- !u!1 &721239139
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 721239142}
+  - component: {fileID: 721239141}
+  - component: {fileID: 721239140}
+  m_Layer: 0
+  m_Name: ColliderEnding
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &721239140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721239139}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00f3127f5a9b3c84ea5a42b686201e0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::EndingTrigger
+  vehicule: {fileID: 1706165194}
+  iterationEnding: {fileID: 2003418900}
+  hasFinished: 0
+--- !u!65 &721239141
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721239139}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 39.253056, y: 16.909288, z: 1}
+  m_Center: {x: -0.81360817, y: -1.795579, z: 0}
+--- !u!4 &721239142
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 721239139}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -11.98, y: 6.7, z: 11.97224}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &757643765
 GameObject:
   m_ObjectHideFlags: 0
@@ -3313,6 +3383,8 @@ MonoBehaviour:
   trailAdd: 0
   iterationCount: 0
   vehiculeController: {fileID: 1706165198}
+  failManager: {fileID: 0}
+  endingTrigger: {fileID: 0}
   trails: []
 --- !u!114 &2003418901
 MonoBehaviour:
@@ -3417,6 +3489,7 @@ SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 2003418899}
+  - {fileID: 721239142}
   - {fileID: 1210971874}
   - {fileID: 1907254244}
   - {fileID: 410087041}
