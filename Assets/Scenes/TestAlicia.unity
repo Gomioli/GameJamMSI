@@ -1955,7 +1955,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.CanvasScaler
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
@@ -5615,10 +5615,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.27
       objectReference: {fileID: 0}
+    - target: {fileID: 490939697822461851, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e1628c4ac51662344aa09576895bc246, type: 2}
     - target: {fileID: 919132149155446097, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
       propertyPath: m_Name
       value: circuit_v2
       objectReference: {fileID: 0}
+    - target: {fileID: 1607320490305382834, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e1628c4ac51662344aa09576895bc246, type: 2}
     - target: {fileID: 1778347059679977266, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.76
@@ -5635,6 +5643,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 2.66
       objectReference: {fileID: 0}
+    - target: {fileID: 3389381061956482650, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e1628c4ac51662344aa09576895bc246, type: 2}
     - target: {fileID: 5035152324553215326, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
       propertyPath: m_LocalPosition.y
       value: 1.76
@@ -5663,6 +5675,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 6ad6cf64be5328b44ab231cc899587d8, type: 2}
+    - target: {fileID: 7833977816161099738, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: e1628c4ac51662344aa09576895bc246, type: 2}
     - target: {fileID: 8612198988356723425, guid: d78fca3d9e95dfe4896c5bf506d3d9bb, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
