@@ -374,17 +374,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   ecranFin: {fileID: 154361248}
-  distancePrecedentText: {fileID: 1370979445}
   distanceActuelleText: {fileID: 913303863}
-  PrecedenteDistanceText: {fileID: 1591740704}
+  distanceTotalText: {fileID: 1370979445}
   victoireDefaiteText: {fileID: 1978091189}
   recommencerButton: {fileID: 1873550983}
   prochaineCourseButton: {fileID: 135887425}
-  distancePrecedentInt: 0
   distanceActuelleInt: 0
+  distanceTotalInt: 0
   distanceManager: {fileID: 1706165199}
   iterationEnding: {fileID: 2003418900}
-  endingTrigger: {fileID: 0}
+  endingTrigger: {fileID: 721239140}
   timer: {fileID: 2003418898}
 --- !u!4 &125023304
 Transform:
@@ -569,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &154361245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1016,7 +1015,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 2
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -1379,7 +1378,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87.6, y: 41.699966}
+  m_AnchoredPosition: {x: 87.6, y: 83}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &913303862
@@ -2058,7 +2057,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -284, y: 42.999966}
+  m_AnchoredPosition: {x: -284, y: 84.3}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1233379608
@@ -2173,7 +2172,7 @@ GameObject:
   - component: {fileID: 1370979444}
   - component: {fileID: 1370979445}
   m_Layer: 5
-  m_Name: DistancePrecedentText
+  m_Name: DistanceTotalText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2195,7 +2194,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 87, y: 88}
+  m_AnchoredPosition: {x: 87, y: 20}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1370979444
@@ -2385,7 +2384,7 @@ GameObject:
   - component: {fileID: 1591740703}
   - component: {fileID: 1591740704}
   m_Layer: 5
-  m_Name: PrecedenteDistanceText
+  m_Name: TotaleDistanceText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2407,7 +2406,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -285, y: 90.99997}
+  m_AnchoredPosition: {x: -285, y: 22.999975}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1591740703
@@ -2438,7 +2437,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Distance pr\xE9c\xE9dente :"
+  m_text: 'Distance Totale :'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3277,7 +3276,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 3
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
