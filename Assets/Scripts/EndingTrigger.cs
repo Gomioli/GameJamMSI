@@ -24,6 +24,7 @@ public class EndingTrigger : MonoBehaviour
         if (other.gameObject == vehicule)
         {
             hasFinished = true;
+            Debug.Log("Trigger touché par : " + other.name);
         }
     }
 
