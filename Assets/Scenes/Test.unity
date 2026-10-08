@@ -374,16 +374,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   ecranFin: {fileID: 154361248}
-  distancePrecedentText: {fileID: 1370979445}
   distanceActuelleText: {fileID: 913303863}
-  PrecedenteDistanceText: {fileID: 1591740704}
+  distanceTotalText: {fileID: 0}
   victoireDefaiteText: {fileID: 1978091189}
   recommencerButton: {fileID: 1873550983}
   prochaineCourseButton: {fileID: 135887425}
-  distancePrecedentInt: 0
   distanceActuelleInt: 0
+  distanceActuelleFloat: 0
+  distanceTotalInt: 0
+  distanceTotalFloat: 0
+  speedWrite: 3
   distanceManager: {fileID: 1706165199}
   iterationEnding: {fileID: 2003418900}
+  endingTrigger: {fileID: 0}
   timer: {fileID: 2003418898}
 --- !u!4 &125023304
 Transform:
@@ -747,13 +750,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.23592703, y: -0, z: -0, w: 0.97177076}
-  m_LocalPosition: {x: 0, y: 6.76, z: -8.88}
+  m_LocalRotation: {x: 0.1945107, y: -0, z: -0, w: 0.98090047}
+  m_LocalPosition: {x: 0, y: 8.67, z: -13.74}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1706165195}
-  m_LocalEulerAnglesHint: {x: 27.293, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 22.432, y: 0, z: 0}
 --- !u!114 &330585547
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3458,6 +3461,8 @@ MonoBehaviour:
   trailAdd: 0
   iterationCount: 0
   vehiculeController: {fileID: 1706165198}
+  failManager: {fileID: 0}
+  endingTrigger: {fileID: 0}
   trails: []
 --- !u!114 &2003418901
 MonoBehaviour:
@@ -3471,10 +3476,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf660df8c6f9bd341a9a1edf8ad41ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetLevel
-  Vehicule: {fileID: 1706165194}
+  vehiculePrefab: {fileID: 0}
   vehiculePositionStart: {fileID: 1210971874}
   trailPositionStart: {fileID: 1907254244}
   iterationEnding: {fileID: 2003418900}
+  decompteDemarrage: 3
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
