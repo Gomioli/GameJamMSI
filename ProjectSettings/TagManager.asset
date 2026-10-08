@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 3
   tags:
   - PlayerCollider
+  - Trail
   layers:
   - Default
   - TransparentFX

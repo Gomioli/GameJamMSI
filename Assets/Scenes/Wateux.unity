@@ -203,7 +203,6 @@ GameObject:
   m_Component:
   - component: {fileID: 105018552}
   - component: {fileID: 105018553}
-  - component: {fileID: 105018554}
   m_Layer: 0
   m_Name: Trail
   m_TagString: Player
@@ -336,20 +335,6 @@ TrailRenderer:
   m_Autodestruct: 0
   m_Emitting: 1
   m_ApplyActiveColorSpace: 1
---- !u!114 &105018554
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 105018551}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f70e36745270e1d4595b4eae902d740a, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TrailMeshManager
-  trailRenderer: {fileID: 105018553}
-  refreshRate: 1
 --- !u!1 &121274348
 GameObject:
   m_ObjectHideFlags: 0
@@ -462,6 +447,7 @@ MonoBehaviour:
   distanceManager: {fileID: 1706165199}
   iterationEnding: {fileID: 2003418900}
   endingTrigger: {fileID: 721239140}
+  triggerVroom: {fileID: 1723838643}
   timer: {fileID: 2003418898}
 --- !u!4 &125023304
 Transform:
@@ -2667,7 +2653,7 @@ GameObject:
   - component: {fileID: 1142220158}
   m_Layer: 0
   m_Name: TheTrail
-  m_TagString: Untagged
+  m_TagString: Trail
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2735,7 +2721,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a977dde7db6f9d6449d39e3bd251fbe5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FailManager
-  vroom: {fileID: 0}
+  vroom: {fileID: 1723838640}
 --- !u!1 &1210971873
 GameObject:
   m_ObjectHideFlags: 0
@@ -4339,6 +4325,21 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 6.141462, y: 3.3332422, z: 12.954612}
   m_Center: {x: 0.3786571, y: -0.3248986, z: 2.8267808}
+--- !u!114 &1723838643
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1723838640}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 233a7a6ff01c4ef45b0bf8e41bf81298, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TriggerVroom
+  vehiculeController: {fileID: 1706165198}
+  uiManager: {fileID: 125023303}
+  isDead: 0
 --- !u!1 &1737311564 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4211984642521298194, guid: 8df3af07c5fad3f4483f21a7bc67cbfa, type: 3}
@@ -4522,7 +4523,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: d4505860535bf9742b7ed10419370fcc, type: 3}
       propertyPath: m_TagString
-      value: Player
+      value: PlayerCollider
       objectReference: {fileID: 0}
     - target: {fileID: 3616844112969948802, guid: d4505860535bf9742b7ed10419370fcc, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -4539,6 +4540,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4505860535bf9742b7ed10419370fcc, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1723838642}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: d4505860535bf9742b7ed10419370fcc, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1723838643}
   m_SourcePrefab: {fileID: 100100000, guid: d4505860535bf9742b7ed10419370fcc, type: 3}
 --- !u!1 &1851870198 stripped
 GameObject:
@@ -5196,8 +5200,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf660df8c6f9bd341a9a1edf8ad41ab3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetLevel
-  Vehicule: {fileID: 0}
-  vroom: {fileID: 0}
+  Vehicule: {fileID: 1706165194}
+  vroom: {fileID: 1723838640}
   vehiculePositionStart: {fileID: 1210971874}
   trailPositionStart: {fileID: 1907254244}
   iterationEnding: {fileID: 2003418900}

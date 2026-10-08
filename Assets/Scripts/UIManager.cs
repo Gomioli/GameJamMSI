@@ -34,6 +34,7 @@ public class UIManager : MonoBehaviour
     [SerializeField] private DistanceManager distanceManager;
     [SerializeField] private IterationEnding iterationEnding;
     [SerializeField] private EndingTrigger endingTrigger;
+    [SerializeField] private TriggerVroom triggerVroom;
     [SerializeField] private Timer timer;
 
 
@@ -62,6 +63,13 @@ public class UIManager : MonoBehaviour
             HasWin();
             ShowUI();
         }
+        else if (triggerVroom.isDead && !animationLancee)
+        {
+            animationLancee = true;
+            HasWin();
+            ShowUI();
+        }
+        
     }
     
     private void ShowUI()
@@ -127,6 +135,14 @@ public class UIManager : MonoBehaviour
             recommencerButton.colors = cbRecommencer;
         }
         else if (timer.isFinished) // Le temps s'est ecoule
+        {
+            victoireDefaiteText.text = "AIE...";
+            prochaineCourseButton.enabled = false;
+            ColorBlock cbProchaineCourse = prochaineCourseButton.colors;
+            cbProchaineCourse.normalColor = Color.gray;
+            prochaineCourseButton.colors = cbProchaineCourse;
+        }
+        else if (triggerVroom.isDead) // MORT
         {
             victoireDefaiteText.text = "AIE...";
             prochaineCourseButton.enabled = false;

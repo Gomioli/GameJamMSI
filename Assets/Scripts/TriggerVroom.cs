@@ -2,7 +2,10 @@ using UnityEngine;
 
 public class TriggerVroom : MonoBehaviour
 {
-    [SerializeField] private 
+    [SerializeField] private VehiculeController vehiculeController;
+    [SerializeField] private UIManager uiManager;
+
+    public bool isDead = false;
     
     public void OnTriggerEnter(Collider other)
     {
@@ -12,6 +15,9 @@ public class TriggerVroom : MonoBehaviour
             {
                 mr.enabled = false;
             }
+            vehiculeController.enabled = false;
+            uiManager.enabled = true;
+            isDead = true;
         }
     }
     
