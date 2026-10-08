@@ -7,18 +7,13 @@ public class ButtonManager : MonoBehaviour
     [SerializeField] private UIManager uiManager;
     [SerializeField] [NotNull] private VehiculeController vehiculeController;
     
-    //[SerializeField] private GameObject vehiculePrefab;
+    [SerializeField] private GameObject vehiculePrefab;
     
     public void OnClick()
     {
         resetLevel.Reset();
         uiManager.ecranFin.enabled = false;
         
-    }
-    
-    public void OnClickProchaineCourse()
-    {
-        uiManager.ecranTBC.enabled = true;
     }
     
     

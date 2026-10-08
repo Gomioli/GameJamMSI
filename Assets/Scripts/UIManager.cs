@@ -7,8 +7,6 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] public Canvas ecranFin;
-    [SerializeField] public Canvas ecranTBC;
-    
     //[SerializeField] private TextMeshProUGUI distancePrecedentText;
     [SerializeField] private TextMeshProUGUI distanceActuelleText;
     [SerializeField] private TextMeshProUGUI distanceTotalText;
@@ -47,8 +45,7 @@ public class UIManager : MonoBehaviour
         //distancePrecedentInt = int.Parse(distancePrecedentText.text);
         
         ecranFin.enabled = false;
-        ecranTBC.enabled = false;
-
+        
     }
     
     void Update()
