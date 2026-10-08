@@ -15,6 +15,11 @@ public class ButtonManager : MonoBehaviour
         uiManager.ecranFin.enabled = false;
         
     }
+
+    public void OnClickProchaineCourse()
+    {
+        uiManager.ecranTBC.enabled = true;
+    }
     
     
     
