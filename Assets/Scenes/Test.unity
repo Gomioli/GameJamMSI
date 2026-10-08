@@ -380,7 +380,10 @@ MonoBehaviour:
   recommencerButton: {fileID: 1873550983}
   prochaineCourseButton: {fileID: 135887425}
   distanceActuelleInt: 0
+  distanceActuelleFloat: 0
   distanceTotalInt: 0
+  distanceTotalFloat: 0
+  speedWrite: 50
   distanceManager: {fileID: 1706165199}
   iterationEnding: {fileID: 2003418900}
   endingTrigger: {fileID: 721239140}
@@ -2331,8 +2334,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 2.5000153}
+  m_SizeDelta: {x: 0, y: 4.999958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464143498
 MonoBehaviour:
