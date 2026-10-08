@@ -37,7 +37,7 @@ public class UIManager : MonoBehaviour
     
     void Update()
     {
-        if (timer.isFinished)
+        if (timer.isFinished) // Je vais devoir changer ça vu que maintenant c'est en FINISSANT UN TOUR
         {
             HasWin();
             ShowUI();
