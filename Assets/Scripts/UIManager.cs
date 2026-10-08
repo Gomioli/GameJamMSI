@@ -6,10 +6,11 @@ using UnityEngine.UI;
 public class UIManager : MonoBehaviour
 {
     [SerializeField] private Canvas ecranFin;
-    [SerializeField] private TextMeshProUGUI distancePrecedentText;
+    //[SerializeField] private TextMeshProUGUI distancePrecedentText;
     [SerializeField] private TextMeshProUGUI distanceActuelleText;
+    [SerializeField] private TextMeshProUGUI distanceTotalText;
 
-    [SerializeField] private TextMeshProUGUI PrecedenteDistanceText;
+    //[SerializeField] private TextMeshProUGUI PrecedenteDistanceText;
     //[SerializeField] private TextMeshProUGUI ActuelleDistanceText;   Je ne sais pas si j'en aurai besoin, mais je le mets là pour y penser au cas où
     
     [SerializeField] private TextMeshProUGUI victoireDefaiteText;
@@ -17,8 +18,9 @@ public class UIManager : MonoBehaviour
     [SerializeField] private Button recommencerButton;
     [SerializeField] private Button prochaineCourseButton;
     
-    public int distancePrecedentInt;
+    //public int distancePrecedentInt;
     public int distanceActuelleInt;
+    public int distanceTotalInt;
 
     [SerializeField] private DistanceManager distanceManager;
     [SerializeField] private IterationEnding iterationEnding;
@@ -30,7 +32,7 @@ public class UIManager : MonoBehaviour
     void Start()
     {
         distanceActuelleInt = int.Parse(distanceActuelleText.text);
-        distancePrecedentInt = int.Parse(distancePrecedentText.text);
+        //distancePrecedentInt = int.Parse(distancePrecedentText.text);
         
         ecranFin.enabled = false;
         
@@ -42,29 +44,38 @@ public class UIManager : MonoBehaviour
         {
             HasWin();
             ShowUI();
-            IncreaseDistanceActuelle();
+            IncreaseDistanceActuelleAndTotal();
         }
     }
     
     private void ShowUI()
     {
-        if (iterationEnding.iterationCount == 1)
-        {
-            distancePrecedentText.enabled = false;
-            PrecedenteDistanceText.enabled = false;
-        }
+        // if (iterationEnding.iterationCount == 1)
+        // {
+        //     distancePrecedentText.enabled = false;
+        //     PrecedenteDistanceText.enabled = false;
+        // }
         ecranFin.enabled = true;
     }
 
     
     // Cette fonction sert à faire le compte de la distance actuelle. Donc de 0 à la distance parcourue à cette run
-    private void IncreaseDistanceActuelle()
+    private void IncreaseDistanceActuelleAndTotal()
     {
         while (distanceManager.distanceParcourueInt != distanceActuelleInt)
         {
             distanceActuelleInt += 1;
             distanceActuelleText.text = distanceActuelleInt.ToString();
+            
         }
+        while (distanceActuelleInt > 0)
+        {
+            distanceActuelleInt -= 1;
+            distanceActuelleText.text = distanceActuelleInt.ToString();
+            distanceTotalInt += 1;
+            distanceTotalText.text = distanceTotalInt.ToString();
+        }
+        
     }
 
     
