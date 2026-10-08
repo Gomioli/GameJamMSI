@@ -1,3 +1,4 @@
+using NUnit.Framework;
 using TMPro;
 using UnityEditor;
 using UnityEngine;
@@ -40,11 +41,16 @@ public class UIManager : MonoBehaviour
     
     void Update()
     {
-        if (timer.isFinished) // Je vais devoir changer ça vu que maintenant c'est en FINISSANT UN TOUR
+        if (endingTrigger.hasFinished) // Je vais devoir changer ça vu que maintenant c'est en FINISSANT UN TOUR
         {
             HasWin();
             ShowUI();
             IncreaseDistanceActuelleAndTotal();
+        }
+        else if (timer.isFinished)
+        {
+            HasWin();
+            ShowUI();
         }
     }
     
