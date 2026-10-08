@@ -11,6 +11,8 @@ public class IterationEnding : MonoBehaviour
     public int iterationCount = 0;
 
     [SerializeField] private VehiculeController vehiculeController;
+    [SerializeField] private FailManager failManager;
+    [SerializeField] private EndingTrigger endingTrigger;
     
     [SerializeField] public List<GameObject> trails = new List<GameObject>();
 
