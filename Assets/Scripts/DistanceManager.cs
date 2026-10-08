@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class DistanceManager : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI distanceParcourueText;
+    [SerializeField] public TextMeshProUGUI distanceParcourueText;
     
     [SerializeField] private VehiculeController vehicleController;
     [SerializeField] private Timer timer;

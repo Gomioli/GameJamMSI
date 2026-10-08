@@ -80,6 +80,10 @@ public class UIManager : MonoBehaviour
         //     PrecedenteDistanceText.enabled = false;
         // }
         ecranFin.enabled = true;
+        
+        // Je retire la distance et le timer
+        timer.timerText.enabled = false;
+        distanceManager.distanceParcourueText.enabled = false;
     }
 
     

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Timer : MonoBehaviour
 {
-    [SerializeField] private TextMeshProUGUI timerText;
+    [SerializeField] public TextMeshProUGUI timerText;
     
     [SerializeField] private IterationEnding iterationEnding;
     
