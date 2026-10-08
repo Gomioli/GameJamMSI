@@ -2765,7 +2765,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1706165195}
-  - component: {fileID: 1706165197}
   - component: {fileID: 1706165196}
   - component: {fileID: 1706165198}
   - component: {fileID: 1706165199}
@@ -2822,27 +2821,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &1706165197
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1706165194}
-  m_Material: {fileID: 13400000, guid: ddaea7c450b48f642968eb539e1c1de3, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Size: {x: 2.0758467, y: 1.8113406, z: 2.1781664}
-  m_Center: {x: -0.017325342, y: 0.5227189, z: 0.0077290535}
 --- !u!114 &1706165198
 MonoBehaviour:
   m_ObjectHideFlags: 0
