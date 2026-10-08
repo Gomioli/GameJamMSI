@@ -354,6 +354,7 @@ GameObject:
   m_Component:
   - component: {fileID: 125023304}
   - component: {fileID: 125023303}
+  - component: {fileID: 125023305}
   m_Layer: 0
   m_Name: UIManager
   m_TagString: Untagged
@@ -405,6 +406,20 @@ Transform:
   - {fileID: 154361245}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &125023305
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 125023302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2a23115b8463e8a48936273e912fe963, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OpacityController
+  background: {fileID: 1464143498}
+  opacity: 0.5
 --- !u!1 &130885295 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: -4204668282259813318, guid: 8df3af07c5fad3f4483f21a7bc67cbfa, type: 3}
@@ -571,7 +586,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &154361245
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1961,7 +1976,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: -35.014, w: 0}
+  m_margin: {x: 0, y: 0, z: -153.82532, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2334,7 +2349,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 2.5000153}
+  m_AnchoredPosition: {x: 0, y: 2.5000305}
   m_SizeDelta: {x: 0, y: 4.999958}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1464143498
