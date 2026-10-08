@@ -35,6 +35,12 @@ public class AccelerationTrigger : MonoBehaviour
 
     private void Update()
     {
+        if (Input.GetKeyDown(KeyCode.S))
+        {
+            GetComponent<AudioSource>().PlayOneShot(freinBagnole);
+        }
+
+
         // GetComponent<AudioSource>().Play(moteurBagnole);
         // GetComponent<AudioSource>().pitch = intensitePitch * vehiculeController.vehiculeRigidbody.linearVelocity;
     }
