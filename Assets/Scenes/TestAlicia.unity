@@ -5171,6 +5171,7 @@ GameObject:
   - component: {fileID: 2003418898}
   - component: {fileID: 2003418900}
   - component: {fileID: 2003418901}
+  - component: {fileID: 2003418902}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -5193,6 +5194,7 @@ MonoBehaviour:
   timerText: {fileID: 1214822933}
   iterationEnding: {fileID: 2003418900}
   timeLeft: 200
+  timeLeftInt: 0
   isFinished: 0
 --- !u!4 &2003418899
 Transform:
@@ -5245,7 +5247,22 @@ MonoBehaviour:
   vroom: {fileID: 1723838640}
   vehiculePositionStart: {fileID: 1210971874}
   trailPositionStart: {fileID: 1907254244}
+  endingTrigger: {fileID: 0}
+  distanceManager: {fileID: 0}
+  timer: {fileID: 0}
   iterationEnding: {fileID: 2003418900}
+--- !u!114 &2003418902
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2003418897}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96886a8a68edf084d98ec5c0cb3293a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ReloadScene
 --- !u!4 &2061346521 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 48d16e965de0bc74583d68b6007c7e2e, type: 3}

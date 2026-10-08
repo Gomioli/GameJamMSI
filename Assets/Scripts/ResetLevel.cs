@@ -14,10 +14,10 @@ public class ResetLevel : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            Reset();
-        }
+        // if (Input.GetKeyDown(KeyCode.R))
+        // {
+        //     Reset();
+        // }
     }
 
     public void Reset()
