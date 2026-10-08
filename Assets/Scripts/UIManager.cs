@@ -68,28 +68,43 @@ public class UIManager : MonoBehaviour
 
     
     // Cette fonction va servir pour savoir quoi afficher dans ShowUI
-    private void HasWin()
+    private void HasWin() 
     {
-        if (iterationEnding.iterationCount == 1)
-        {
-            if (distanceManager.distanceParcourueInt >= distancePrecedentInt)
-            {
-                victoireDefaiteText.text = "BRAVO";
-                recommencerButton.enabled = false;
-                ColorBlock cbRecommencer = recommencerButton.colors;
-                cbRecommencer.normalColor = Color.gray;
-                recommencerButton.colors = cbRecommencer;
-            }
-            else
-            {
-                victoireDefaiteText.text = "AIE...";
-                prochaineCourseButton.enabled = false;
-                ColorBlock cbProchaineCourse = prochaineCourseButton.colors;
-                cbProchaineCourse.normalColor = Color.gray;
-                prochaineCourseButton.colors = cbProchaineCourse;
-            }
-        }
+        
     }
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    // private void HasWin() 
+    // {
+    //     if (iterationEnding.iterationCount == 1)
+    //     {
+    //         if (distanceManager.distanceParcourueInt >= distancePrecedentInt)
+    //         {
+    //             victoireDefaiteText.text = "BRAVO";
+    //             recommencerButton.enabled = false;
+    //             ColorBlock cbRecommencer = recommencerButton.colors;
+    //             cbRecommencer.normalColor = Color.gray;
+    //             recommencerButton.colors = cbRecommencer;
+    //         }
+    //         else
+    //         {
+    //             victoireDefaiteText.text = "AIE...";
+    //             prochaineCourseButton.enabled = false;
+    //             ColorBlock cbProchaineCourse = prochaineCourseButton.colors;
+    //             cbProchaineCourse.normalColor = Color.gray;
+    //             prochaineCourseButton.colors = cbProchaineCourse;
+    //         }
+    //     }
+    // }
     
     
 }
