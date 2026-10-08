@@ -513,6 +513,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIManager
   ecranFin: {fileID: 154361248}
+  ecranTBC: {fileID: 0}
   distanceActuelleText: {fileID: 913303863}
   distanceTotalText: {fileID: 1370979445}
   victoireDefaiteText: {fileID: 1978091189}
@@ -1302,7 +1303,7 @@ Transform:
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
   m_LocalRotation: {x: 0.23592703, y: -0, z: -0, w: 0.97177076}
-  m_LocalPosition: {x: 0, y: 6.76, z: -8.88}
+  m_LocalPosition: {x: 0, y: 6.76, z: -8.879999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4537,7 +4538,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TrailMeshManager
   trailRenderer: {fileID: 105018553}
   refreshRate: 1
-  camera: {fileID: 0}
+  camera: {fileID: 330585545}
 --- !u!4 &1142220157
 Transform:
   m_ObjectHideFlags: 0
@@ -7267,6 +7268,8 @@ GameObject:
   - component: {fileID: 1706165196}
   - component: {fileID: 1706165198}
   - component: {fileID: 1706165199}
+  - component: {fileID: 1706165201}
+  - component: {fileID: 1706165200}
   m_Layer: 0
   m_Name: Vehicule
   m_TagString: Player
@@ -7287,8 +7290,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 105018552}
   - {fileID: 330585546}
+  - {fileID: 105018552}
   - {fileID: 1723838641}
   - {fileID: 2094705220}
   m_Father: {fileID: 0}
@@ -7353,6 +7356,123 @@ MonoBehaviour:
   timer: {fileID: 2003418898}
   distanceParcourueFloat: 0
   distanceParcourueInt: 0
+--- !u!114 &1706165200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706165194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5ec2a8e0df8d0047ba7e20c81dd972a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AccelerationTrigger
+  moteurBagnole: 0
+  accelerartionBagnole: {fileID: 8300000, guid: 38cda766fdbb6b04c9981e4e1a453df0, type: 3}
+  freinBagnole: {fileID: 8300000, guid: 98d7ef124d53c374eb227a577ff336fa, type: 3}
+  crashBagnole: {fileID: 8300000, guid: e7ad2b1029b9d934cb79062bd8f55a17, type: 3}
+  mortBagnole: {fileID: 8300000, guid: e7ad2b1029b9d934cb79062bd8f55a17, type: 3}
+  intensitePitch: 1
+  vehicule: {fileID: 0}
+  vehiculeController: {fileID: 0}
+--- !u!82 &1706165201
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1706165194}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: c02fd8af94516e745b3bfa77e24a7fe6, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1709319461 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 8e42d9c2f9ef4be4ab205295b630c058, type: 3}
