@@ -1,15 +1,13 @@
-using System.Collections;
 using UnityEngine;
 
 public class ResetLevel : MonoBehaviour
 {
-    [SerializeField] private GameObject vehiculePrefab;
+    [SerializeField] private GameObject Vehicule;
+    [SerializeField] private GameObject vroom;
     [SerializeField] private Transform vehiculePositionStart;
     [SerializeField] private Transform trailPositionStart;
     
     [SerializeField] private IterationEnding iterationEnding;
-
-    public int decompteDemarrage = 3;
     
     void Update()
     {
@@ -20,15 +18,13 @@ public class ResetLevel : MonoBehaviour
     }
 
     public void Reset()
-    {
-        Destroy(vehiculePrefab);
-        StartCoroutine(DemarrageVehicule());
-        Instantiate(vehiculePrefab, vehiculePositionStart.position, vehiculePositionStart.rotation);
-    }
+    { 
+        Vehicule.transform.position = vehiculePositionStart.position; 
+        Vehicule.transform.rotation = vehiculePositionStart.rotation;
+        
+        vroom.GetComponentInChildren<MeshRenderer>().enabled = true;
 
-    private IEnumerator DemarrageVehicule()
-    {
-        yield return new WaitForSeconds(decompteDemarrage);
+
     }
 
     

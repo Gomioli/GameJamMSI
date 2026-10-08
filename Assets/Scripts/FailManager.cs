@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class FailManager : MonoBehaviour
 {
+    
+    [SerializeField] private GameObject vroom;
 
     
     void Update()
@@ -13,7 +15,11 @@ public class FailManager : MonoBehaviour
     // Ca c'est juste la morte lorsqu'on touche un trail
     private void OnCollisionEnter(Collision collision)
     { 
-        Destroy(collision.gameObject);
+        if (collision.gameObject == vroom)
+        {
+            vroom.GetComponentInChildren<MeshRenderer>().enabled = true;
+        }
+            
     }
     
 }
